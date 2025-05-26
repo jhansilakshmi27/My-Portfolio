@@ -17,18 +17,14 @@ export default function BaseLayout() {
    const refPortfolio = useScrollObserver(setActive);
    let [darkMode, setDarkMode] = useState(false);
 
-
-
    function handleToggleDarkMode() {
       let oppositeOfCurrentDarkMode = !darkMode
-      console.log(oppositeOfCurrentDarkMode)
       localStorage.setItem('darkMode', `${oppositeOfCurrentDarkMode}`)
       setDarkMode(oppositeOfCurrentDarkMode)
    }
 
    useEffect(() => {
       let detectedDarkMode = JSON.parse(localStorage.getItem('darkMode'));
-
       if (detectedDarkMode) {
          setDarkMode(detectedDarkMode)
       } else {
@@ -47,14 +43,13 @@ export default function BaseLayout() {
                {singlePage ? <SinglePageRoutes refs={{refHome, refAbout, refPortfolio}}/> : <MultiPageRoutes />}
             </Grid>
             <Grid item>
+               {/* Footer cleaned up: Remove template credit */}
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                   py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
-                  <p>template created with &hearts; by <a href={'https://paytonpierce.dev'}>Payton Pierce</a></p>
-                  <p>&copy; 2023</p>
+                  <p>&copy; 2025</p>
                </Box>
             </Grid>
          </Grid>
       </Box>
    )
 }
-

@@ -1,21 +1,31 @@
-@import "../../variables.modules";
+.aboutCard {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 2rem;
+    padding: 3rem 2.5rem;
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    transition: box-shadow 0.3s;
+    backdrop-filter: blur(4px);
 
-.pink {
-  color: $pink;
+    @media (max-width: 700px) {
+        padding: 2rem 1rem;
+        max-width: 90vw;
+    }
 }
 
-.green {
-  color: $green;
+.heading {
+    font-weight: 700;
+    color: #274472;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
 }
 
-.skills {
-  columns: 1;
-  @media only screen and (min-width: 940px) {
-    columns: 2;
-  }
-
-  li {
-    margin: 0;
-    line-height: 1.75;
-  }
+.aboutText {
+    color: #353535;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: center;
 }
