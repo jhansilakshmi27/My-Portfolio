@@ -135,7 +135,7 @@ export default function MyntraHackerrampLearnMore() {
               maxWidth: 850,
               mx: "auto",
               letterSpacing: "0.01em",
-              textAlign: { xs: "center", md: "left" },
+              textAlign:  "center",
             }}
           >
             Every idea begins with a spark—and for us, it was more like a flurry of sparks flying everywhere!
@@ -243,7 +243,7 @@ export default function MyntraHackerrampLearnMore() {
                 mb: 4,
                 fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.09rem" },
                 lineHeight: 1.7,
-                textAlign: { xs: "center", md: "left" },
+                textAlign:  "center",
               }}
             >
               We chose the problem statement <b>Trend Identification and Designing</b>—and immediately dove into brainstorming.
@@ -263,7 +263,7 @@ export default function MyntraHackerrampLearnMore() {
                 display: "flex",
                 gap: 1,
                 alignItems: "center",
-                textAlign: { xs: "center", md: "left" },
+                textAlign:  "center",
               }}
             >
               🎬 Idea #1: Movie Costumes, Made Accessible
@@ -274,7 +274,7 @@ export default function MyntraHackerrampLearnMore() {
                 color: "#666",
                 mb: 3,
                 fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: "center",
               }}
             >
               Remember how kids love dressing up like their favorite movie characters? The market has those costumes—but not in one place.
@@ -303,7 +303,7 @@ export default function MyntraHackerrampLearnMore() {
                 display: "flex",
                 gap: 1,
                 alignItems: "center",
-                textAlign: { xs: "center", md: "left" },
+                textAlign:  "center",
               }}
             >
               🛋️ Idea #2: AR-Powered Home Decor
@@ -314,7 +314,7 @@ export default function MyntraHackerrampLearnMore() {
                 color: "#666",
                 mb: 3,
                 fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: "center",
               }}
             >
               Let’s face it—returning furniture is a nightmare. Online shopping for home decor is full of guesswork. That’s why we thought:
@@ -337,7 +337,7 @@ export default function MyntraHackerrampLearnMore() {
                     color: "#009688",
                     mb: 2,
                     fontSize: { xs: "1.05rem", md: "1.25rem" },
-                    textAlign: { xs: "center", md: "left" },
+                    textAlign: "center",
                   }}
                 >
                   💡 What We Learned
@@ -348,7 +348,7 @@ export default function MyntraHackerrampLearnMore() {
                     color: "#444",
                     mb: 3,
                     fontSize: { xs: ".98rem", sm: "1.07rem", md: "1.12rem" },
-                    textAlign: { xs: "center", md: "left" },
+                    textAlign: "center",
                   }}
                 >
                   Even though we didn’t advance past this phase—possibly due to our limited AR implementation experience—we walked away with something more valuable:
