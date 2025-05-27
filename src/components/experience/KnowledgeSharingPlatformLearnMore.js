@@ -198,7 +198,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
               }}
             >
               I built the user profile module from the ground up—everything from designing the frontend (<b>profile.tsx</b>) to setting up backend endpoints and database structure.
-               <ul style={{ margin: "8px 0 8px 18px", textAlign: "left" }}>
+               <ul style={{ margin: "8px 0 8px 18px", textAlign: "center" }}>
                 <li>Editable user profiles with dynamic updates</li>
                 <li>Persistent data storage so that profile data doesn’t reset</li>
                 <li>Seamless navigation from profile to discussion</li>
@@ -230,7 +230,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
               }}
             >
               In Phase 2, I worked on making the platform more personalized and scalable by adding college-specific templates.
-              <ul style={{ margin: "8px 0 8px 18px", textAlign: "left" }}>
+              <ul style={{ margin: "8px 0 8px 18px", textAlign: "center" }}>
                 <li>Designed a pop-up system on the homepage that prompts users to log in and fill in college details</li>
                 <li>Built a college card system where users can add/edit templates and switch colleges</li>
                 <li>Implemented a search bar and popularity-based sorting using likes/stars</li>
