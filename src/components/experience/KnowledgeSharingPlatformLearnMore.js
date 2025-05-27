@@ -18,7 +18,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
     <Box
       sx={{
         minHeight: "100vh",
-        width: "100vw",
+        width: "100%",
         background: "linear-gradient(120deg,#f7fafc 60%,#e3f2fd 100%)",
         py: { xs: 2, md: 8 },
         px: 0,
