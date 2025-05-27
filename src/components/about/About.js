@@ -35,7 +35,7 @@ const About = () => (
     <BubblesBackground />
     <Box
       minHeight="100vh"
-      width="100vw"
+      width="100%"
       display="flex"
       alignItems={{ xs: "flex-start", md: "center" }} // CHANGED
       justifyContent="center"
