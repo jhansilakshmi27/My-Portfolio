@@ -37,7 +37,7 @@ const About = () => (
       minHeight="100vh"
       width="100vw"
       display="flex"
-      alignItems="flex-start"
+      alignItems={{ xs: "flex-start", md: "center" }} // CHANGED
       justifyContent="center"
       position="relative"
       zIndex={2}
@@ -49,7 +49,8 @@ const About = () => (
         sx={{
           width: "100%",
           maxWidth: 900,
-          px: { xs: 2, sm: 4, md: 6 },
+          px: { xs: 1, sm: 3, md: 6 }, // CHANGED: less padding for xs
+          mx: "auto", // CHANGED: always center horizontally
         }}
       >
         <Typography
@@ -62,6 +63,7 @@ const About = () => (
             letterSpacing: 3,
             textAlign: "center",
             textShadow: "0 2px 12px #20204044",
+             fontSize: { xs: "2rem", sm: "2.5rem", md: "2.8rem" } // CHANGED
           }}
         >
           ABOUT ME
@@ -71,10 +73,10 @@ const About = () => (
           fontWeight={600}
           color="grey.900"
           sx={{
-            textAlign: "center",
+            textAlign: { xs: "center", md: "left" }, // CHANGED: center for xs, left for md+
             lineHeight: 1.7,
             letterSpacing: 0.5,
-            fontSize: { xs: "1.15rem", sm: "1.28rem", md: "1.38rem" },
+            fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.38rem" }, // CHANGED: smaller on xs
             textShadow: "0 2px 10px #e0f7fa77",
             mb: 5,
           }}
@@ -90,24 +92,24 @@ const About = () => (
             textAlign: "center",
             mb: 3,
             letterSpacing: 2,
-            fontSize: { xs: "1.17rem", sm: "1.25rem", md: "1.35rem" }
+            fontSize: { xs: "1.09rem", sm: "1.18rem", md: "1.35rem" } // CHANGED
           }}
         >
-          SKILLS
+         SKILLS
         </Typography>
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={{ xs: 1, sm: 2 }} justifyContent="center">
           {skills.map((skill, idx) => (
             <Grid key={idx} item xs={6} sm={4} md={3}>
               <Paper
-                elevation={5}
+                elevation={2} // CHANGED: less shadow for mobile
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  p: 2,
+                  p: { xs: 1, sm: 2 }, // CHANGED: less padding on xs
                   borderRadius: 3,
-                  boxShadow: "0 4px 20px 0 #b2dfdb22",
-                  minHeight: 90,
+                  boxShadow: { xs: "0 2px 8px 0 #b2dfdb11", sm: "0 4px 20px 0 #b2dfdb22" },
+                  minHeight: { xs: 70, sm: 90 }, // CHANGED: smaller for xs
                   transition: "transform 0.22s, box-shadow 0.22s",
                   "&:hover": {
                     transform: "scale(1.09) translateY(-4px)",
@@ -117,14 +119,14 @@ const About = () => (
                   mb: 1
                 }}
               >
-                <Box sx={{ mb: 1 }}>{skill.icon}</Box>
+               <Box sx={{ mb: 1 }}>{skill.icon}</Box>
                 <Typography
                   variant="subtitle2"
                   sx={{
                     fontWeight: 600,
                     color: "#3949ab",
                     textAlign: "center",
-                    fontSize: { xs: "0.95rem", sm: "1.07rem" }
+                    fontSize: { xs: "0.89rem", sm: "1.07rem" } 
                   }}
                 >
                   {skill.name}

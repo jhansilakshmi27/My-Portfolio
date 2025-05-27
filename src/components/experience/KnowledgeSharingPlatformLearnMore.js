@@ -57,7 +57,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
         }}
       />
 
-      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+       <Container maxWidth="md" sx={{ position: "relative", zIndex: 1, px: { xs: 1, sm: 2, md: 0 } }}> {/* CHANGED: padding for mobile */}
         <Fade in timeout={900}>
           <Stack alignItems="center" spacing={2} mb={1}>
             <Chip
@@ -84,7 +84,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 WebkitTextFillColor: "transparent",
                 mb: 1,
                 userSelect: "none",
-                fontSize: { xs: "2rem", sm: "2.3rem", md: "2.8rem" },
+                fontSize: { xs: "1.6rem", sm: "2.3rem", md: "2.8rem" }, // CHANGED: smaller on xs
                 transition: "transform .4s",
                 ":hover": { transform: "scale(1.012)" },
               }}
@@ -97,13 +97,13 @@ export default function KnowledgeSharingPlatformLearnMore() {
         {/* Main image */}
         <Grow in timeout={1200}>
           <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
-            <Box
+             <Box
               component="img"
               src={mainImage}
               alt="Knowledge Sharing Platform Screenshot"
               loading="lazy"
               sx={{
-                maxWidth: { xs: "97vw", sm: 540 },
+                maxWidth: { xs: "96vw", sm: 540 }, // CHANGED: slightly smaller for xs
                 width: "100%",
                 borderRadius: "20px",
                 boxShadow: "0 8px 32px 0 rgba(60,60,120,0.13)",
@@ -123,7 +123,12 @@ export default function KnowledgeSharingPlatformLearnMore() {
             <Typography
               variant="h4"
               fontWeight={700}
-              sx={{ color: "#1b5e20", mb: 1.5, fontSize: { xs: "1.2rem", md: "1.5rem" } }}
+              sx={{
+                color: "#1b5e20",
+                mb: 1.5,
+                fontSize: { xs: "1.1rem", md: "1.5rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+              }}
             >
               🧠 Why I Chose This Project
             </Typography>
@@ -132,7 +137,8 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#444",
                 mb: 3,
-                fontSize: { xs: "1.05rem", md: "1.13rem" },
+                fontSize: { xs: "1.01rem", md: "1.13rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               As a student, I’ve personally experienced how time-consuming and frustrating it can be to find the right course materials, understand grading schemes, or even just get a sense of what to expect from a particular professor. There’s no single place that gives honest, crowd-sourced, and well-organized academic insights. That’s exactly the gap I wanted to help fill with KSP.<br /><br />
@@ -142,22 +148,28 @@ export default function KnowledgeSharingPlatformLearnMore() {
         </Fade>
 
         {/* My Contributions */}
-        <Divider sx={{ mb: 3, bgcolor: "#b2dfdb" }} />
+         <Divider sx={{ mb: 3, bgcolor: "#b2dfdb" }} />
         <Fade in timeout={1700}>
           <Box mb={4}>
             <Typography
               variant="h4"
               fontWeight={700}
-              sx={{ color: "#1976d2", mb: 1.5, fontSize: { xs: "1.2rem", md: "1.5rem" } }}
+              sx={{
+                color: "#1976d2",
+                mb: 1.5,
+                fontSize: { xs: "1.1rem", md: "1.5rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+              }}
             >
               💻 My Contributions
-            </Typography>
+             </Typography>
             <Typography
               variant="body1"
               sx={{
                 color: "#444",
                 mb: 2.5,
-                fontSize: { xs: "1.04rem", md: "1.11rem" },
+                fontSize: { xs: "1.01rem", md: "1.11rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               The project already had a basic foundation with some initial pages like Home, Notes, PYQs, and a Course page. But there was no user profile setup, and the platform lacked interactivity and engagement features. That’s where my work began.
@@ -170,7 +182,8 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#43a047",
                 mb: 1,
-                fontSize: { xs: "1.05rem", md: "1.18rem" },
+                fontSize: { xs: "1.01rem", md: "1.18rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               🚀 Phase 1: User Profile & Discussion Page
@@ -180,11 +193,12 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#555",
                 mb: 2,
-                fontSize: { xs: "0.97rem", md: "1.07rem" },
+                fontSize: { xs: "0.97rem", md: "1.07rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               I built the user profile module from the ground up—everything from designing the frontend (<b>profile.tsx</b>) to setting up backend endpoints and database structure.
-              <ul style={{ margin: "8px 0 8px 18px" }}>
+               <ul style={{ margin: "8px 0 8px 18px", textAlign: "left" }}>
                 <li>Editable user profiles with dynamic updates</li>
                 <li>Persistent data storage so that profile data doesn’t reset</li>
                 <li>Seamless navigation from profile to discussion</li>
@@ -200,7 +214,8 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#43a047",
                 mb: 1,
-                fontSize: { xs: "1.05rem", md: "1.18rem" },
+                fontSize: { xs: "1.01rem", md: "1.18rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               🚀 Phase 2: Template Page & Popups
@@ -210,11 +225,12 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#555",
                 mb: 2,
-                fontSize: { xs: "0.97rem", md: "1.07rem" },
+                fontSize: { xs: "0.97rem", md: "1.07rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               In Phase 2, I worked on making the platform more personalized and scalable by adding college-specific templates.
-              <ul style={{ margin: "8px 0 8px 18px" }}>
+              <ul style={{ margin: "8px 0 8px 18px", textAlign: "left" }}>
                 <li>Designed a pop-up system on the homepage that prompts users to log in and fill in college details</li>
                 <li>Built a college card system where users can add/edit templates and switch colleges</li>
                 <li>Implemented a search bar and popularity-based sorting using likes/stars</li>
@@ -234,7 +250,8 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#1b5e20",
                 mb: 2,
-                fontSize: { xs: "1.09rem", md: "1.23rem" },
+                fontSize: { xs: "1.07rem", md: "1.23rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               🛠️ Challenges & What I Learned
@@ -244,7 +261,8 @@ export default function KnowledgeSharingPlatformLearnMore() {
               sx={{
                 color: "#444",
                 mb: 3,
-                fontSize: { xs: "1.02rem", md: "1.14rem" },
+                fontSize: { xs: "1.01rem", md: "1.14rem" }, // CHANGED: smaller on xs
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               When I started, backend development was completely new territory for me. But through this project, I learned to:
@@ -257,7 +275,12 @@ export default function KnowledgeSharingPlatformLearnMore() {
             </Typography>
             <Typography
               variant="h6"
-              sx={{ color: "#1976d2", mb: 1.5, fontWeight: 700 }}
+              sx={{
+                color: "#1976d2",
+                mb: 1.5,
+                fontWeight: 700,
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+              }}
             >
               Cheers to what I had till now!!
             </Typography>
@@ -265,8 +288,9 @@ export default function KnowledgeSharingPlatformLearnMore() {
               variant="body1"
               sx={{
                 color: "#444",
-                fontSize: { xs: "1.03rem", md: "1.12rem" },
-                mb: 2
+                fontSize: { xs: "1.01rem", md: "1.12rem" }, // CHANGED: smaller on xs
+                mb: 2,
+                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
               }}
             >
               KSP wasn’t just about building features—it was about building something meaningful for the student community. It helped me grow technically, taught me the importance of clean structure, and most importantly, gave me a real taste of what it means to solve a problem that hits close to home.

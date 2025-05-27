@@ -63,7 +63,7 @@ export default function Home({ innerRef }) {
       component="main"
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
-      alignItems="center"
+      alignItems={{ xs: "stretch", md: "center" }} // CHANGED: stretch for mobile, center for desktop
       justifyContent="center"
       minHeight="calc(100vh - 175px)"
       id="home"
@@ -106,8 +106,8 @@ export default function Home({ innerRef }) {
           component="img"
           src={me}
           alt="Jhansi's portrait"
-          width={{ xs: "29vh", md: "34vh" }}
-          height={{ xs: "29vh", md: "34vh" }}
+          width={{ xs: "40vw", sm: "29vh", md: "34vh" }} // CHANGED: avatar width more responsive for mobile
+          height={{ xs: "40vw", sm: "29vh", md: "34vh" }} // CHANGED: avatar height more responsive for mobile
           borderRadius="50%"
           sx={{
             background: "#fff",
@@ -127,9 +127,10 @@ export default function Home({ innerRef }) {
       {/* Main content - open, no card or background */}
       <Box
         sx={{
+          width: "100%", // CHANGED: allow content to use full width on xs
           maxWidth: 590,
           ml: { xs: 0, md: 5 },
-          px: { xs: 2, md: 3 },
+          px: { xs: 2, sm: 3, md: 3 }, // CHANGED: more padding on sm
           py: { xs: 0, md: 0 },
           borderRadius: 0,
           bgcolor: "transparent",
@@ -148,7 +149,7 @@ export default function Home({ innerRef }) {
           variant="h2"
           sx={{
             fontWeight: 900,
-            fontSize: { xs: "2.15rem", sm: "2.6rem", md: "3.05rem" },
+            fontSize: { xs: "2rem", sm: "2.6rem", md: "3.05rem" }, // CHANGED: a bit smaller for xs
             mb: 1.25,
             letterSpacing: 1.8,
             lineHeight: 1.12,
@@ -177,7 +178,7 @@ export default function Home({ innerRef }) {
           sx={{
             color: "#7e57c2",
             mb: 2,
-            fontSize: { xs: "1.09rem", sm: "1.23rem", md: "1.39rem" },
+            fontSize: { xs: "1rem", sm: "1.23rem", md: "1.39rem" }, // CHANGED: a bit smaller for xs
             textAlign: { xs: "center", md: "left" },
             letterSpacing: ".07em",
             textShadow: "0 2px 18px #ede7fa55"
@@ -192,9 +193,9 @@ export default function Home({ innerRef }) {
           sx={{
             mb: 2.8,
             mt: 1,
-            pl: { xs: 2.5, md: 2 },
+            pl: { xs: 0, md: 2 }, // CHANGED: remove padding left on xs (mobile)
             pr: 1,
-            fontSize: { xs: "1.08rem", sm: "1.15rem" },
+            fontSize: { xs: "1rem", sm: "1.15rem" }, // CHANGED: a bit smaller for xs
             position: "relative"
           }}
         >
@@ -207,7 +208,7 @@ export default function Home({ innerRef }) {
           direction="row"
           spacing={3}
           justifyContent={{ xs: "center", md: "flex-start" }}
-          sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, my: 2, zIndex: 3, position: "relative" }}
+          sx={{ fontSize: { xs: "1.8rem", sm: "2rem", md: "2.5rem" }, my: 2, zIndex: 3, position: "relative" }} // CHANGED: icon size smaller for xs
         >
           {info.socials.map((social, index) => (
             <Tooltip key={index} title={social.label.charAt(0).toUpperCase() + social.label.slice(1)}>
@@ -217,8 +218,8 @@ export default function Home({ innerRef }) {
                   alignItems: "center",
                   justifyContent: "center",
                   borderRadius: "50%",
-                  width: 48,
-                  height: 48,
+                  width: { xs: 38, sm: 48 }, // CHANGED: smaller icons on xs
+                  height: { xs: 38, sm: 48 },
                   cursor: "pointer",
                   background: "rgba(250,250,255,0.91)",
                   boxShadow: "0 2px 12px #b2dfdb44",
@@ -252,17 +253,17 @@ export default function Home({ innerRef }) {
             </Tooltip>
           ))}
         </Stack>
-        <Box sx={{ width: { xs: "88%", md: "64%" }, mt: 2, mx: "auto", borderBottom: "2.5px solid #e0e0e0", opacity: 0.6 }} />
+        <Box sx={{ width: { xs: "95%", md: "64%" }, mt: 2, mx: "auto", borderBottom: "2.5px solid #e0e0e0", opacity: 0.6 }} /> {/* CHANGED: divider wider for xs */}
         {/* Bio under a divider, still no card */}
         <Typography
           variant="body1"
           sx={{
             color: "#444",
             fontWeight: 500,
-            textAlign: { xs: "center", md: "left" },
+            textAlign: { xs: "center", md: "left" }, // COMMENT: already responsive
             mt: 2.5,
             lineHeight: 1.72,
-            fontSize: { xs: ".98rem", sm: "1.09rem" },
+            fontSize: { xs: ".97rem", sm: "1.09rem" }, // CHANGED: a bit smaller for xs
             animation: "fadeinBio 1.8s",
             "@keyframes fadeinBio": {
               "0%": { opacity: 0, transform: "translateY(30px)" },
@@ -276,3 +277,4 @@ export default function Home({ innerRef }) {
     </Box>
   );
 }
+
