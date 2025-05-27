@@ -22,7 +22,7 @@ export default function MyntraHackerrampLearnMore() {
     <Box
       sx={{
         minHeight: "100vh",
-        width: "100vw",
+        width: "100%", // FIX: was 100vw, now 100%
         background: "linear-gradient(120deg,#f5fafd 60%,#e0f7fa 100%)",
         py: { xs: 2, sm: 4, md: 8 },
         px: 0,
@@ -33,6 +33,9 @@ export default function MyntraHackerrampLearnMore() {
         },
         position: "relative",
         overflow: "hidden",
+        display: "flex",               // ADD
+        flexDirection: "column",       // ADD
+        alignItems: "center",          // ADD: centers horizontally on all screens
       }}
     >
       {/* Decorative spotlights */}
@@ -61,7 +64,16 @@ export default function MyntraHackerrampLearnMore() {
         }}
       />
 
-      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1, px: { xs: 1, sm: 2, md: 0 } }}> {/* CHANGED: responsive horizontal padding */}
+      <Container
+        maxWidth="md"
+        sx={{
+          position: "relative",
+          zIndex: 1,
+          px: { xs: 1, sm: 2, md: 0 },
+          width: "100%",              // ADD: always take full width of parent
+          mx: "auto",                 // ADD: center on small screens
+        }}
+      >
         <Fade in timeout={1000}>
           <Stack alignItems="center" spacing={2} mb={1}>
             <Chip
@@ -91,7 +103,7 @@ export default function MyntraHackerrampLearnMore() {
                 mb: 2,
                 userSelect: "none",
                 transition: "transform 0.4s",
-                fontSize: { xs: "1.6rem", sm: "2.3rem", md: "2.8rem" }, // CHANGED: smaller on xs
+                fontSize: { xs: "1.6rem", sm: "2.3rem", md: "2.8rem" },
                 ":hover": { transform: "scale(1.015)" },
               }}
             >
@@ -104,7 +116,7 @@ export default function MyntraHackerrampLearnMore() {
                 color: "#3949ab",
                 mb: { xs: 1.5, md: 2.5 },
                 letterSpacing: ".01em",
-                fontSize: { xs: "1rem", sm: "1.18rem", md: "1.37rem" }, // CHANGED: smaller on xs
+                fontSize: { xs: "1rem", sm: "1.18rem", md: "1.37rem" },
                 opacity: 0.92,
                 textAlign: "center"
               }}
@@ -118,12 +130,12 @@ export default function MyntraHackerrampLearnMore() {
             variant="body1"
             sx={{
               color: "#555",
-              fontSize: { xs: "0.98rem", sm: "1.09rem", md: "1.13rem" }, // CHANGED: smaller on xs
+              fontSize: { xs: "0.98rem", sm: "1.09rem", md: "1.13rem" },
               mb: 4,
               maxWidth: 850,
               mx: "auto",
               letterSpacing: "0.01em",
-              textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs, left on md+
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             Every idea begins with a spark—and for us, it was more like a flurry of sparks flying everywhere!
@@ -153,75 +165,74 @@ export default function MyntraHackerrampLearnMore() {
           </Box>
         </Grow>
 
-<Slide in direction="up" timeout={1200}>
-  <Stack
-    direction="row"
-    flexWrap="wrap"
-    spacing={1}
-    useFlexGap
-    alignItems="center"
-    justifyContent="center"
-    mb={2}
-    sx={{
-    width: "100%",
-    mx: "auto",
-    maxWidth: { xs: 340, sm: 600, md: 900 }, // allow more width on desktop
-  }}
-  >
-    <Chip
-      icon={<span style={{ fontSize: "1.35em" }}>🧠</span>}
-      label="Trend Identification & Designing"
-      sx={{
-        bgcolor: "#e0f2f1",
-        color: "#00796b",
-        fontWeight: 600,
-        fontSize: { xs: "0.84rem", sm: "1rem" },
-        px: 2,
-        py: 1,
-        letterSpacing: "0.02em",
-        borderRadius: 2,
-        minWidth: { xs: 0, sm: 0 },
-        textAlign: "center",
-        whiteSpace: "normal",
-      }}
-    />
-    <Chip
-      icon={<span style={{ fontSize: "1.22em" }}>🎬</span>}
-      label="Movie Costumes"
-      sx={{
-        bgcolor: "#e8eaf6",
-        color: "#3949ab",
-        fontWeight: 600,
-        fontSize: { xs: "0.84rem", sm: "1rem" },
-        px: 2,
-        py: 1,
-        letterSpacing: "0.02em",
-        borderRadius: 2,
-        minWidth: { xs: 0, sm: 0 },
-        textAlign: "center",
-        whiteSpace: "normal",
-      }}
-    />
-    <Chip
-      icon={<span style={{ fontSize: "1.22em" }}>🛋️</span>}
-      label="AR Home Decor"
-      sx={{
-        bgcolor: "#e3f2fd",
-        color: "#0277bd",
-        fontWeight: 600,
-        fontSize: { xs: "0.84rem", sm: "1rem" },
-        px: 2,
-        py: 1,
-        letterSpacing: "0.02em",
-        borderRadius: 2,
-        minWidth: { xs: 0, sm: 0 },
-        textAlign: "center",
-        whiteSpace: "normal",
-      }}
-    />
-  </Stack>
-</Slide>
-
+        <Slide in direction="up" timeout={1200}>
+          <Stack
+            direction="row"
+            flexWrap="wrap"
+            spacing={1}
+            useFlexGap
+            alignItems="center"
+            justifyContent="center"
+            mb={2}
+            sx={{
+              width: "100%",
+              mx: "auto",
+              maxWidth: { xs: 340, sm: 600, md: 900 },
+            }}
+          >
+            <Chip
+              icon={<span style={{ fontSize: "1.35em" }}>🧠</span>}
+              label="Trend Identification & Designing"
+              sx={{
+                bgcolor: "#e0f2f1",
+                color: "#00796b",
+                fontWeight: 600,
+                fontSize: { xs: "0.84rem", sm: "1rem" },
+                px: 2,
+                py: 1,
+                letterSpacing: "0.02em",
+                borderRadius: 2,
+                minWidth: { xs: 0, sm: 0 },
+                textAlign: "center",
+                whiteSpace: "normal",
+              }}
+            />
+            <Chip
+              icon={<span style={{ fontSize: "1.22em" }}>🎬</span>}
+              label="Movie Costumes"
+              sx={{
+                bgcolor: "#e8eaf6",
+                color: "#3949ab",
+                fontWeight: 600,
+                fontSize: { xs: "0.84rem", sm: "1rem" },
+                px: 2,
+                py: 1,
+                letterSpacing: "0.02em",
+                borderRadius: 2,
+                minWidth: { xs: 0, sm: 0 },
+                textAlign: "center",
+                whiteSpace: "normal",
+              }}
+            />
+            <Chip
+              icon={<span style={{ fontSize: "1.22em" }}>🛋️</span>}
+              label="AR Home Decor"
+              sx={{
+                bgcolor: "#e3f2fd",
+                color: "#0277bd",
+                fontWeight: 600,
+                fontSize: { xs: "0.84rem", sm: "1rem" },
+                px: 2,
+                py: 1,
+                letterSpacing: "0.02em",
+                borderRadius: 2,
+                minWidth: { xs: 0, sm: 0 },
+                textAlign: "center",
+                whiteSpace: "normal",
+              }}
+            />
+          </Stack>
+        </Slide>
 
         <Fade in timeout={2600}>
           <Box>
@@ -230,16 +241,15 @@ export default function MyntraHackerrampLearnMore() {
               sx={{
                 color: "#666",
                 mb: 4,
-                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.09rem" }, // CHANGED: smaller on xs
+                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.09rem" },
                 lineHeight: 1.7,
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs, left on md+
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               We chose the problem statement <b>Trend Identification and Designing</b>—and immediately dove into brainstorming.
               At first, everything felt like it had already been done. AI assistants? Check. Rewards programs? Check.
               Cool... but nothing that felt fresh or impactful for both customers and Myntra.<br /><br />
               That’s when we decided to go back to the people. We spoke to relatives, neighbors, and friends to understand what real users actually wanted. The conversations opened our eyes—and soon, our idea started taking shape.
-            
             </Typography>
             <Divider sx={{ mb: 4, bgcolor: "#b2dfdb" }} />
             <Typography
@@ -248,12 +258,12 @@ export default function MyntraHackerrampLearnMore() {
               sx={{
                 color: "#3949ab",
                 mb: 1,
-                fontSize: { xs: "1.01rem", md: "1.2rem" }, // CHANGED: smaller on xs
+                fontSize: { xs: "1.01rem", md: "1.2rem" },
                 letterSpacing: ".01em",
                 display: "flex",
                 gap: 1,
                 alignItems: "center",
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               🎬 Idea #1: Movie Costumes, Made Accessible
@@ -263,8 +273,8 @@ export default function MyntraHackerrampLearnMore() {
               sx={{
                 color: "#666",
                 mb: 3,
-                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               Remember how kids love dressing up like their favorite movie characters? The market has those costumes—but not in one place.
@@ -288,12 +298,12 @@ export default function MyntraHackerrampLearnMore() {
               sx={{
                 color: "#3949ab",
                 mb: 1,
-                fontSize: { xs: "1.01rem", md: "1.2rem" }, // CHANGED: smaller on xs
+                fontSize: { xs: "1.01rem", md: "1.2rem" },
                 letterSpacing: ".01em",
                 display: "flex",
                 gap: 1,
                 alignItems: "center",
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               🛋️ Idea #2: AR-Powered Home Decor
@@ -303,8 +313,8 @@ export default function MyntraHackerrampLearnMore() {
               sx={{
                 color: "#666",
                 mb: 3,
-                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                fontSize: { xs: "0.97rem", sm: "1.04rem", md: "1.07rem" },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               Let’s face it—returning furniture is a nightmare. Online shopping for home decor is full of guesswork. That’s why we thought:
@@ -326,8 +336,8 @@ export default function MyntraHackerrampLearnMore() {
                   sx={{
                     color: "#009688",
                     mb: 2,
-                    fontSize: { xs: "1.05rem", md: "1.25rem" }, // CHANGED: smaller on xs
-                    textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                    fontSize: { xs: "1.05rem", md: "1.25rem" },
+                    textAlign: { xs: "center", md: "left" },
                   }}
                 >
                   💡 What We Learned
@@ -337,8 +347,8 @@ export default function MyntraHackerrampLearnMore() {
                   sx={{
                     color: "#444",
                     mb: 3,
-                    fontSize: { xs: ".98rem", sm: "1.07rem", md: "1.12rem" }, // CHANGED: smaller on xs
-                    textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                    fontSize: { xs: ".98rem", sm: "1.07rem", md: "1.12rem" },
+                    textAlign: { xs: "center", md: "left" },
                   }}
                 >
                   Even though we didn’t advance past this phase—possibly due to our limited AR implementation experience—we walked away with something more valuable:
@@ -361,5 +371,3 @@ export default function MyntraHackerrampLearnMore() {
     </Box>
   );
 }
-
-
