@@ -127,7 +127,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#1b5e20",
                 mb: 1.5,
                 fontSize: { xs: "1.1rem", md: "1.5rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center"
               }}
             >
               🧠 Why I Chose This Project
@@ -138,7 +138,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#444",
                 mb: 3,
                 fontSize: { xs: "1.01rem", md: "1.13rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center"
               }}
             >
               As a student, I’ve personally experienced how time-consuming and frustrating it can be to find the right course materials, understand grading schemes, or even just get a sense of what to expect from a particular professor. There’s no single place that gives honest, crowd-sourced, and well-organized academic insights. That’s exactly the gap I wanted to help fill with KSP.<br /><br />
@@ -158,7 +158,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#1976d2",
                 mb: 1.5,
                 fontSize: { xs: "1.1rem", md: "1.5rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center"
               }}
             >
               💻 My Contributions
@@ -169,7 +169,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#444",
                 mb: 2.5,
                 fontSize: { xs: "1.01rem", md: "1.11rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center"
               }}
             >
               The project already had a basic foundation with some initial pages like Home, Notes, PYQs, and a Course page. But there was no user profile setup, and the platform lacked interactivity and engagement features. That’s where my work began.
@@ -183,7 +183,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#43a047",
                 mb: 1,
                 fontSize: { xs: "1.01rem", md: "1.18rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center",
               }}
             >
               🚀 Phase 1: User Profile & Discussion Page
@@ -194,7 +194,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#555",
                 mb: 2,
                 fontSize: { xs: "0.97rem", md: "1.07rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center", 
               }}
             >
               I built the user profile module from the ground up—everything from designing the frontend (<b>profile.tsx</b>) to setting up backend endpoints and database structure.
@@ -215,7 +215,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#43a047",
                 mb: 1,
                 fontSize: { xs: "1.01rem", md: "1.18rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center", 
               }}
             >
               🚀 Phase 2: Template Page & Popups
@@ -226,7 +226,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#555",
                 mb: 2,
                 fontSize: { xs: "0.97rem", md: "1.07rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center", 
               }}
             >
               In Phase 2, I worked on making the platform more personalized and scalable by adding college-specific templates.
@@ -251,7 +251,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#1b5e20",
                 mb: 2,
                 fontSize: { xs: "1.07rem", md: "1.23rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center",
               }}
             >
               🛠️ Challenges & What I Learned
@@ -262,7 +262,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#444",
                 mb: 3,
                 fontSize: { xs: "1.01rem", md: "1.14rem" }, // CHANGED: smaller on xs
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center",
               }}
             >
               When I started, backend development was completely new territory for me. But through this project, I learned to:
@@ -279,7 +279,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#1976d2",
                 mb: 1.5,
                 fontWeight: 700,
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign:  "center"
               }}
             >
               Cheers to what I had till now!!
@@ -290,7 +290,7 @@ export default function KnowledgeSharingPlatformLearnMore() {
                 color: "#444",
                 fontSize: { xs: "1.01rem", md: "1.12rem" }, // CHANGED: smaller on xs
                 mb: 2,
-                textAlign: { xs: "center", md: "left" }, // CHANGED: center on xs
+                textAlign: "center",
               }}
             >
               KSP wasn’t just about building features—it was about building something meaningful for the student community. It helped me grow technically, taught me the importance of clean structure, and most importantly, gave me a real taste of what it means to solve a problem that hits close to home.
