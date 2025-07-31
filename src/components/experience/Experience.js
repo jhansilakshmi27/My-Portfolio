@@ -32,6 +32,14 @@ const projects = [
     github: "https://github.com/JhansiMatcha/Stock_Price_Prediction",
     // No learnMore key here
   },
+  {
+    title: "Real Estate Website Development Internship - Basil Infotech",
+    description:
+      "Worked as an intern to design and develop a modern real estate website using TypeScript, CSS, and JavaScript. Contributed to features such as property listings, responsive layouts, and user-friendly navigation, enhancing the overall user experience and functionality of the platform.",
+    image: "https://unsplash.com/photos/white-and-blue-glass-walled-high-rise-building-w3eFhqXjkZE",
+    github: "https://github.com/ashwaniraj0813/real_estate",
+    // No learnMore key here
+  },
 ];
 
 const achievements = [
@@ -117,7 +125,6 @@ export default function Experience() {
                       variant="outlined"
                       color="primary"
                       size="small"
-                      endIcon={<InfoIcon />}
                     >
                       Learn about my experience
                     </Button>
