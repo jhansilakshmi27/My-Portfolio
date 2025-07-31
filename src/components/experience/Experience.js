@@ -1,6 +1,7 @@
 import React from "react";
 import myntra from "../../img/myntra.jpeg";
 import stock from "../../img/stock.jpg";
+import realestate from "../../img/realestate"
 
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Grid, Stack, Link as MuiLink, Paper } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
@@ -36,7 +37,7 @@ const projects = [
     title: "Real Estate Website Development Internship - Basil Infotech",
     description:
       "Worked as an intern to design and develop a modern real estate website using TypeScript, CSS, and JavaScript. Contributed to features such as property listings, responsive layouts, and user-friendly navigation, enhancing the overall user experience and functionality of the platform.",
-    image: real-estate-pic,
+    image: realestate,
     github: "https://github.com/ashwaniraj0813/real_estate",
     // No learnMore key here
   },
