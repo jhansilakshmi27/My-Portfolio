@@ -1,7 +1,7 @@
 import React from "react";
 import myntra from "../../img/myntra.jpeg";
 import stock from "../../img/stock.jpg";
-import realestate from "../../img/realestate"
+import realestate from "../../img/realestate.jpg";
 
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Grid, Stack, Link as MuiLink, Paper } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
